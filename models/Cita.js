@@ -1,4 +1,4 @@
-// models/Cita.js
+
 const mongoose = require('mongoose');
 
 const CitaSchema = new mongoose.Schema({

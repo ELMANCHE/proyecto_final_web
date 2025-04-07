@@ -1,4 +1,4 @@
-// controllers/citaController.js
+
 const Cita = require('../models/Cita');
 
 // Crear cita
