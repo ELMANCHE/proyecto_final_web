@@ -1,4 +1,3 @@
-
 const Cita = require('../models/Cita');
 
 // Crear cita
