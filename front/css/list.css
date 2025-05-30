@@ -1,0 +1,112 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables de color */
+:root {
+    --primary-purple: #6B46C1;
+    --secondary-purple: #9333EA;
+    --light-gray: #F3F4F6;
+}
+
+/* Encabezado */
+.header {
+    background: #000;
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.phone-icon {
+    color: #FF6B6B;
+    font-size: 24px;
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 2rem;
+    background: white;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* Tabla de pacientes */
+.patient-table {
+    width: 90%; /* Aumentado del 100% */
+    border: 3px solid var(--primary-purple);
+    border-collapse: collapse;
+    margin: 2rem auto; /* Centrado con margen superior/inferior */
+    font-size: 16px; /* Tamaño de fuente más grande */
+}
+
+/* Encabezados de la tabla */
+.patient-table th,
+.patient-table td {
+    border: 1px solid #ddd;
+    padding: 1.5rem; /* Espaciado interno mayor */
+    text-align: left;
+}
+
+.patient-table th {
+    background: var(--light-gray);
+    font-weight: bold;
+    color: var(--primary-purple);
+}
+
+/* Filas pares */
+.patient-table tr:nth-child(even) {
+    background: var(--light-gray);
+}
+
+/* Hover en filas */
+.patient-table tr:hover {
+    background: var(--secondary-purple);
+    color: white;
+    cursor: pointer;
+}
+
+/* Ancho específico de columnas */
+.patient-table td:first-child {
+    width: 10%; /* Aumenta el ancho de la columna ID */
+}
+
+.patient-table td:nth-child(2) {
+    width: 40%; /* Aumenta la columna de nombres */
+}
+
+.patient-table td:nth-child(3) {
+    width: 30%; /* Ajusta la columna de teléfono */
+}
+
+.patient-table td:nth-child(4) {
+    width: 15%; /* Reduce ligeramente la columna de edad */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .patient-table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .patient-table th,
+    .patient-table td {
+        padding: 1rem;
+    }
+
+    .patient-table td:first-child,
+    .patient-table td:nth-child(4) {
+        width: auto;
+    }
+}

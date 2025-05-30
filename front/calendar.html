@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martina - Calendario</title>
+    <link rel="stylesheet" href="./css/calendar.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="logo">MARTINA</div>
+        <div class="year">2024</div>
+        <nav class="nav-links">
+            <a href="./login.html">LOGIN</a>
+            <a href="#">CONTACTANOS</a>
+            <span class="phone-icon">📞</span>
+        </nav>
+    </header>
+
+    <!-- Selector de tema -->
+    <div class="theme-selector">
+        <button class="theme-btn active" data-theme="blue">Azul</button>
+        <button class="theme-btn" data-theme="pink">Rosa</button>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <!-- Barra lateral izquierda -->
+        <aside class="sidebar">
+            <!-- To-Do List -->
+            <div class="todo-section">
+                <h3>Recetas</h3>
+                <ul class="todo-list">
+                    <li><input type="checkbox"><input type="text"></li>
+                    <li><input type="checkbox"><input type="text"></li>
+                    <li><input type="checkbox"><input type="text"></li>
+                    <li><input type="checkbox"><input type="text"></li>
+                    <li><input type="checkbox"><input type="text"></li>
+                </ul>
+            </div>
+
+            <!-- Sección de notas -->
+            <div class="notes-section">
+                <h3>Notas</h3>
+                <textarea placeholder="Escribe tus notas aquí..."></textarea>
+            </div>
+        </aside>
+
+        <!-- Calendario -->
+        <div class="calendar">
+            <!-- Encabezado del calendario -->
+            <div class="calendar-header"></div>
+
+            <!-- Días del mes -->
+            <div class="calendar-grid"></div>
+        </div>
+    </div>
+
+    <!-- Ventana emergente para agregar eventos -->
+    <div class="event-modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Agregar evento</h3>
+            <input type="text" placeholder="Nombre del evento">
+            <div class="emoji-picker">
+                <img src="emojis/happy.png" alt="Felicidad">
+                <img src="emojis/sad.png" alt="Tristeza">
+                <img src="emojis/tired.png" alt="Cansancio">
+            </div>
+            <button class="save-event">Guardar</button>
+        </div>
+    </div>
+
+    <script src="./js/calendar.js"></script>
+</body>
+</html>

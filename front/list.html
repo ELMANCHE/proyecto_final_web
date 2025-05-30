@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martina - Lista de Pacientes</title>
+    <link rel="stylesheet" href="./css/list.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="logo">MARTINA</div>
+        <nav class="nav-links">
+            <a href="./history.html">FORMULARIO</a>
+            <a href="./index.html">CERRAR SESIÓN</a>
+            <a href="#">CONTACTANOS</a>
+            <span class="phone-icon">📞</span>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <!-- Tabla de pacientes -->
+        <table id="patientsTable" class="patient-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre y Apellidos</th>
+                    <th>Teléfono</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo de filas (simulación) -->
+                <tr class="patient-row" data-id="1">
+                    <td>1</td>
+                    <td>Maria Gómez</td>
+                    <td>123-456-7890</td>
+                    <td>32</td>
+                </tr>
+                <tr class="patient-row" data-id="2">
+                    <td>2</td>
+                    <td>Carlos Pérez</td>
+                    <td>987-654-3210</td>
+                    <td>28</td>
+                </tr>
+                <tr class="patient-row" data-id="3">
+                    <td>3</td>
+                    <td>Ana López</td>
+                    <td>555-123-4567</td>
+                    <td>41</td>
+                </tr>
+                <tr class="patient-row" data-id="4">
+                    <td>4</td>
+                    <td>Juan Martínez</td>
+                    <td>333-987-6543</td>
+                    <td>37</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="./js/list.js"></script>
+</body>
+</html>

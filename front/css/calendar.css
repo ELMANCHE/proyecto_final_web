@@ -1,0 +1,191 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables de color */
+:root {
+    --primary-blue: #89CFF0;
+    --primary-pink: #FFB6C1;
+    --secondary-blue: #4A90E2;
+    --secondary-pink: #FF69B4;
+    --text-color: #333;
+}
+
+/* Encabezado */
+.header {
+    background: #000;
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.year {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Selector de tema */
+.theme-selector {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.theme-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.theme-btn.active {
+    background: #4CAF50;
+    color: white;
+}
+
+/* Contenido principal */
+.container {
+    display: flex;
+    padding: 20px;
+    background: var(--primary-blue);
+}
+
+.sidebar {
+    width: 25%;
+    padding-right: 20px;
+}
+
+.todo-section, .notes-section {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.todo-list li {
+    display: flex;
+    margin: 10px 0;
+}
+
+.todo-list input[type="text"] {
+    width: 100%;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.notes-section textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    resize: none;
+}
+
+/* Calendario */
+.calendar {
+    width: 75%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-header .day {
+    text-align: center;
+    padding: 10px;
+    background: var(--secondary-blue);
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.date-cell {
+    min-height: 120px;
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.date-number {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Modal de eventos */
+.event-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 70%;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.emoji-picker img {
+    width: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Temas */
+.pink-theme {
+    --primary-blue: #FFB6C1;
+    --secondary-blue: #FF69B4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .calendar {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
